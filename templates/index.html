@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prediction</title>
+</head>
+<body>
+    <h1>Predict whether a person makes over 50K per year or not </h1>
+    <h4><a href="report.html">Click Here To See Data Analysis</a></h4>
+    <div class=form>
+        <form action="/predict" method="POST">
+            <h1>  </h1>
+            <label for="Age">Age:-></label>
+            <input type="text" name="Age" id="Age" placeholder="Age">
+            <h1>  </h1>
+            <label for="Fnlwgt">Fnlwgt:-></label>
+            <input type="text" name="Fnlwgt" id="Fnlwgt" placeholder="Fnlwgt">
+            <h5>continuous and represents final weight, which is the number of units in the target population that the responding unit represents</h5>
+            <h1>  </h1>
+            <label for="Education">Education:-></label>
+             <select name="Education" id="Education">
+                <option value=8> 1st-4th </option>
+                <option value=12> Bachelors </option>
+                <option value=7> Prof-school </option>
+                <option value=14> Assoc-voc </option>
+                <option value=2> 5th-6th </option>
+                <option value=13> 10th </option>
+                <option value=9> Assoc-acdm </option>
+                <option value=4> Masters </option>
+                <option value=15> 9th </option>
+                <option value=3> HS-grad </option>
+                <option value=11> 11th </option>
+                <option value=6> 7th-8th </option>
+                <option value=0> Some-college </option>
+                <option value=1> Preschool </option>
+                <option value=10> Doctorate </option>
+                <option value=5> 12th </option>
+             </select>
+             <h1>  </h1>
+            <label for="workclass">workclass-></label>
+             <select name="workclass" id="workclass">
+                <option value=4> Local-gov </option>
+                <option value=6> Self-emp-not-inc </option>
+                <option value=5> Private </option>
+                <option value=3> Without-pay </option>
+                <option value=7> Never-worked </option>
+                <option value=2> Federal-gov </option>
+                <option value=1> State-gov </option>
+                <option value=0> Self-emp-inc </option>
+             </select>
+             <h1> </h1>
+             <label for="Educational-num">Educational-num</label>
+             <select name="Educational-num" id="Educational-num">
+                <option value= 1 > 1 </option>
+                <option value= 2 > 2 </option>
+                <option value= 3 > 3 </option>
+                <option value= 4 > 4 </option>
+                <option value= 5 > 5 </option>
+                <option value= 6 > 6 </option>
+                <option value= 7 > 7 </option>
+                <option value= 8 > 8 </option>
+                <option value= 9 > 9 </option>
+                <option value= 10 > 10 </option>
+                <option value= 11 > 11 </option>
+                <option value= 12 > 12 </option>
+                <option value= 13 > 13 </option>
+                <option value= 14 > 14 </option>
+                <option value= 15 > 15 </option>
+                <option value= 16 > 16 </option>
+             </select>
+             <h1> </h1>
+             <label for="Marital-status">Marital-status</label>
+
+             <select name="Marital-status" id="Marital-status">
+                <option value=0> Married-AF-spouse </option>
+                <option value=3> Separated </option>
+                <option value=2> Married-civ-spouse </option>
+                <option value=6> Married-spouse-absent </option>
+                <option value=1> Widowed </option>
+                <option value=5> Never-married </option>
+                <option value=4> Divorced </option>
+             </select>
+             <h1> </h1>
+             <label for="Relationship">Relationship</label>
+             <select name="Relationship" id="Relationship">
+                <option value=3> Unmarried </option>
+                <option value=5> Own-child </option>
+                <option value=2> Other-relative </option>
+                <option value=1> Wife </option>
+                <option value=4> Husband </option>
+                <option value=0> Not-in-family </option>
+             </select>
+             <h1> </h1>
+             <label for="Race">Race</label>
+             <select name="Race" id="Race">
+                <option value=4> Amer-Indian-Eskimo </option>
+                <option value=1> Asian-Pac-Islander </option>
+                <option value=0> Black </option>
+                <option value=2> Other </option>
+                <option value=3> White </option>
+            </select>
+            
+            <label for="Gender">Gender</label>
+            <select name="Gender" id="Gender">
+                <option value=0> Male </option>
+                <option value=1> Female </option>
+            </select>
+
+            <label for="capital gain">capital gain:-></label>
+            <input type="text" name="capital gain" id="capital gain" placeholder="capital gain">
+            
+            <label for="capital loss">capital los:-></label>
+            <input type="text" name="capital loss" id="capital loss" placeholder="capital loss">
+            
+            <label for="hours per week">hours per week:-></label>
+            <input type="text" name="hours per week" id="hours per week" placeholder="hours per week">
+            <h1> </h1>
+            <label for="Native-country">Native-country</label>
+            <select name="Native-country" id="Native-country"><option value= 0 > England </option>
+                <option value= 1 > China </option>
+                <option value= 2 > Cambodia </option>
+                <option value= 3 > Taiwan </option>
+                <option value= 4 > Puerto-Rico </option>
+                <option value= 5 > Thailand </option>
+                <option value= 6 > Jamaica </option>
+                <option value= 7 > Philippines </option>
+                <option value= 8 > El-Salvador </option>
+                <option value= 9 > Ecuador </option>
+                <option value= 10 > Outlying-US(Guam-USVI-etc) </option>
+                <option value= 11 > Germany </option>
+                <option value= 12 > Poland </option>
+                <option value= 13 > Yugoslavia </option>
+                <option value= 14 > Hungary </option>
+                <option value= 15 > Guatemala </option>
+                <option value= 16 > France </option>
+                <option value= 17 > Peru </option>
+                <option value= 18 > Japan </option>
+                <option value= 19 > Nicaragua </option>
+                <option value= 20 > Trinadad&Tobago </option>
+                <option value= 21 > Iran </option>
+                <option value= 22 > Portugal </option>
+                <option value= 23 > Honduras </option>
+                <option value= 24 > Cuba </option>
+                <option value= 25 > Canada </option>
+                <option value= 26 > Holand-Netherlands </option>
+                <option value= 27 > Ireland </option>
+                <option value= 28 > Mexico </option>
+                <option value= 29 > Hong </option>
+                <option value= 30 > Vietnam </option>
+                <option value= 31 > Laos </option>
+                <option value= 32 > United-States </option>
+                <option value= 33 > Italy </option>
+                <option value= 34 > Haiti </option>
+                <option value= 35 > India </option>
+                <option value= 36 > Scotland </option>
+                <option value= 37 > Columbia </option>
+                <option value= 38 > Dominican-Republic </option>
+                <option value= 39 > Greece </option>
+                <option value= 40 > South </option>
+            </select>
+            <h1> </h1>
+            <label for="occupation">occupation</label>
+            <select name="occupation" id="occupation">
+                <option value=9> Craft-repair </option>
+                <option value=4> Handlers-cleaners </option>
+                <option value=8> Priv-house-serv </option>
+                <option value=11> Transport-moving </option>
+                <option value=12> Armed-Forces </option>
+                <option value=10> Sales </option>
+                <option value=14> Protective-serv </option>
+                <option value=13> Other-service </option>
+                <option value=5> Prof-specialty </option>
+                <option value=2> Tech-support </option>
+                <option value=3> Adm-clerical </option>
+                <option value=6> Machine-op-inspct </option>
+                <option value=1> Farming-fishing </option>
+                <option value=7> Exec-managerial </option></select>
+
+                <input type="submit" value="Predict">
+        </form>
+
+    </div>
+    
+</body>
+</html>
